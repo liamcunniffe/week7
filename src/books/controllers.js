@@ -17,7 +17,23 @@ const getAllBooks = async (request, response) => {
   response.send({ message: "all the books", books: books });
 };
 
+const newAuthor = (request, response) => {
+  console.log(request.body);
+  return response.json({
+    message: "updated the author",
+  });
+};
+
+const removeBook = (request, response) => {
+  console.log(request.params);
+  return response.json({
+    message: "book deleted",
+  });
+};
+
 module.exports = {
   addBook: addBook,
   getAllBooks: getAllBooks,
+  newAuthor: newAuthor,
+  removeBook: removeBook,
 };
