@@ -7,7 +7,12 @@ bookRouter.post("/books", addBook);
 
 bookRouter.get("/books/getAllBooks", getAllBooks);
 
-bookRouter.put("/books", (request, response) => {});
+bookRouter.put("/books", (request, response) => {
+  console.log(request.body);
+  return response.json({
+    message: "updated the author",
+  });
+});
 
 bookRouter.delete("/books", (request, response) => {});
 
